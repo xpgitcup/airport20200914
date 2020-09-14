@@ -76,6 +76,17 @@ dependencies {
     testCompile "org.seleniumhq.selenium:selenium-support:3.14.0"
     testRuntime "org.seleniumhq.selenium:selenium-chrome-driver:3.14.0"
     testRuntime "org.seleniumhq.selenium:selenium-firefox-driver:3.14.0"
+    // 数据库驱动
+    runtime "mysql:mysql-connector-java:8.0.15" //升级到8.0.12, 8.0.15
+
+    //阿里巴巴的JSON
+    // https://mvnrepository.com/artifact/com.alibaba/fastjson
+    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.73'
+
+    // 用户管理
+    compile 'org.grails.plugins:spring-security-core:4.0.0'
+    compile 'org.grails.plugins:spring-security-rest:3.0.1'
+    compile 'org.grails.plugins:spring-security-rest-gorm:3.0.1'
 }
 
 bootRun {
