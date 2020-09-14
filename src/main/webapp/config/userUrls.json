@@ -14,5 +14,6 @@
 	"/userRole/**",
 	"/requestmap/**",
 	"/securityInfo/**",
-	"/restOauth/**"
+	"/restOauth/**",
+	"/persistentLogin/**"
 ]

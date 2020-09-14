@@ -32,3 +32,7 @@ grails.plugin.springsecurity.filterChain.chainMap = [
 grails.plugin.springsecurity.rememberMe.persistent = true
 grails.plugin.springsecurity.rememberMe.persistentToken.domainClassName = 'cn.edu.cup.system.CupToken'
 
+// 设置令牌存储域类名称
+grails.plugin.springsecurity.rest.token.storage.gorm.tokenDomainClassName = "cn.edu.cup.system.CupToken"
+grails.plugin.springsecurity.rest.token.storage.gorm.tokenValuePropertyName = "token"
+grails.plugin.springsecurity.rest.token.storage.gorm.usernamePropertyName = "username"
