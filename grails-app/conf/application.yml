@@ -8,6 +8,26 @@ grails:
             # Whether to translate GORM events into Reactor events
             # Disabled by default for performance reasons
             events: false
+    #--------------------------------------------
+    #上传文件大小的限制--李晓平--20181128
+    controllers:
+        upload:
+            maxFileSize: 200000000
+            maxRequestSize: 200000000
+
+    #跨域的访问
+    cors:
+        enabled: true
+
+#设置会话超时时间---李晓平--20181128
+server:
+    servlet:
+        session:
+            timeout: 1800
+
+    # 改变端口号
+    port: 8000
+
 info:
     app:
         name: '@info.app.name@'
