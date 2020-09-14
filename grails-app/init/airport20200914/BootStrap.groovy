@@ -11,7 +11,7 @@ class BootStrap {
         initService.setSampleData()
         initService.loadScripts("${webRootDir}sql")
     }
-    
+
     def destroy = {
     }
 }

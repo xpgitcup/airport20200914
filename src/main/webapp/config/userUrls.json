@@ -13,5 +13,6 @@
 	"/role/**",
 	"/userRole/**",
 	"/requestmap/**",
-	"/securityInfo/**"
+	"/securityInfo/**",
+	"/restOauth/**"
 ]
