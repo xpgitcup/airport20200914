@@ -28,3 +28,7 @@ grails.plugin.springsecurity.filterChain.chainMap = [
 	[pattern: '/**',             filters: 'JOINED_FILTERS']
 ]
 
+
+grails.plugin.springsecurity.rememberMe.persistent = true
+grails.plugin.springsecurity.rememberMe.persistentToken.domainClassName = 'cn.edu.cup.system.CupToken'
+
