@@ -32,15 +32,6 @@ class InitService {
         createUserAndRole()
     }
 
-    // 创建核心的数据
-    def createCoreData(String webRootDir) {
-        // 物理单位
-        initQuantityUnit()
-        // 初始化元素
-        initBasicEngineeringElement('材料介质', webRootDir)
-        initBasicEngineeringElement('设备', webRootDir)
-    }
-
     private void createUserAndRole() {
         // 创建角色
         def adminRole = new Role(authority: 'ROLE_ADMIN').save()
@@ -102,9 +93,6 @@ class InitService {
                 }
             }
         }
-    }
-
-    def void createDomainHeader() {
     }
 
 }

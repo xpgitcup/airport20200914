@@ -1,0 +1,21 @@
+[
+	"/",
+	"/error",
+	"/index",
+	"/index.gsp",
+	"/**/favicon.ico",
+	"/shutdown",
+	"/assets/**",
+	"/**/js/**",
+	"/**/css/**",
+	"/**/images/**",
+	"/toDoItem/**",
+	"/login",
+	"/login.*",
+	"/login/*",
+	"/logout",
+	"/logout.*",
+	"/logout/*",
+	"/home/**",
+	"/engineeringOperation/**"
+]

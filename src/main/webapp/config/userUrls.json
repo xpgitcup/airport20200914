@@ -1,0 +1,17 @@
+[
+	"/dataItem/**",
+	"/dataTypeCode/**",
+	"/dataTypeCodeOperation/**",
+	"/engineeringElement/**",
+	"/engineeringElementOperation/**",
+	"/basicStructure/**",
+	"/basicStructureOperation/**",
+	"/unitSystem/**",
+	"/quantityUnit/**",
+	"/physicalQuantity/**",
+	"/user/**",
+	"/role/**",
+	"/userRole/**",
+	"/requestmap/**",
+	"/securityInfo/**"
+]
