@@ -12,40 +12,30 @@ import com.alibaba.fastjson.annotation.JSONField
  * 型号--设备往往都有型号
  * 编号--用户指定的
  */
-class EngineeringElement implements Comparable<EngineeringElement>{
+class EngineeringElement{
 
     @JSONField(ordinal=0)
     String name
     @JSONField(ordinal=1)
     String appendName
     @JSONField(ordinal=2)
-    String dataTypeCode
-    @JSONField(ordinal=3)
-    EngineeringElement parentElement
-    @JSONField(ordinal=4)
-    int orderCode = 0
+    BasicStructure basicStructure
 
     @JSONField(ordinal=5)
-    SortedSet dataItems, children
+    SortedSet dataItems
 
-    static hasMany = [dataItems: DataItem, children: EngineeringElement]
+    static hasMany = [dataItems: DataItem]
 
     static mapping = {}
 
     static constraints = {
         name(nullable: false)
         appendName(nullable: true)
-        dataTypeCode(nullable: false)
-        orderCode()
-        parentElement(nullable: true)
+        basicStructure(nullable: false)
     }
 
     String toString() {
         return "${name}"
     }
 
-    @Override
-    int compareTo(EngineeringElement o) {
-        return orderCode.compareTo(o.orderCode)
-    }
 }

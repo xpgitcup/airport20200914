@@ -3,15 +3,15 @@
 
  Source Server         : sample
  Source Server Type    : MySQL
- Source Server Version : 80016
+ Source Server Version : 80019
  Source Host           : localhost:3306
  Source Schema         : airport20200914
 
  Target Server Type    : MySQL
- Target Server Version : 80016
+ Target Server Version : 80019
  File Encoding         : 65001
 
- Date: 22/09/2020 09:22:33
+ Date: 22/09/2020 22:36:35
 */
 
 SET NAMES utf8mb4;
@@ -22,13 +22,13 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `basic_structure`;
 CREATE TABLE `basic_structure`  (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `version` bigint(20) NOT NULL,
+  `id` bigint(0) NOT NULL AUTO_INCREMENT,
+  `version` bigint(0) NOT NULL,
   `basic_structure_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `auxname` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `data_property_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `parent_id` bigint(20) NULL DEFAULT NULL,
+  `parent_id` bigint(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `FKrcaroc83ey6ievi1476inbjf7`(`parent_id`) USING BTREE,
   CONSTRAINT `FKrcaroc83ey6ievi1476inbjf7` FOREIGN KEY (`parent_id`) REFERENCES `basic_structure` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
@@ -49,11 +49,11 @@ INSERT INTO `basic_structure` VALUES (9, 2, 'ElementType', 'null', 'none', '泵'
 INSERT INTO `basic_structure` VALUES (10, 0, 'ElementType', NULL, 'none', '阀', 8);
 INSERT INTO `basic_structure` VALUES (11, 1, 'ElementObject', 'null', 'none', '离心泵', 9);
 INSERT INTO `basic_structure` VALUES (12, 0, 'ElementType', NULL, 'none', '往复泵', 9);
-INSERT INTO `basic_structure` VALUES (13, 0, 'ElementType', NULL, 'none', '截断阀', 10);
-INSERT INTO `basic_structure` VALUES (14, 0, 'ElementType', NULL, 'none', '调节阀', 10);
-INSERT INTO `basic_structure` VALUES (15, 0, 'ElementType', NULL, 'none', '管道', 8);
-INSERT INTO `basic_structure` VALUES (16, 0, 'ElementType', NULL, 'none', '地井阀', 10);
-INSERT INTO `basic_structure` VALUES (17, 0, 'ElementType', NULL, 'none', '储罐', 8);
+INSERT INTO `basic_structure` VALUES (13, 1, 'ElementObject', 'null', 'none', '截断阀', 10);
+INSERT INTO `basic_structure` VALUES (14, 1, 'ElementObject', 'null', 'none', '调节阀', 10);
+INSERT INTO `basic_structure` VALUES (15, 1, 'ElementObject', 'null', 'none', '管道', 8);
+INSERT INTO `basic_structure` VALUES (16, 1, 'ElementObject', 'null', 'none', '地井阀', 10);
+INSERT INTO `basic_structure` VALUES (17, 1, 'ElementObject', 'null', 'none', '储罐', 8);
 INSERT INTO `basic_structure` VALUES (18, 0, 'ElementType', NULL, 'none', '设施', NULL);
 INSERT INTO `basic_structure` VALUES (19, 0, 'ElementType', NULL, 'none', '站点', 18);
 INSERT INTO `basic_structure` VALUES (20, 0, 'ElementType', NULL, 'none', '阀室', 18);
@@ -91,6 +91,6 @@ INSERT INTO `basic_structure` VALUES (52, 1, 'DataProperty', 'm', 'scalar', '管
 INSERT INTO `basic_structure` VALUES (53, 2, 'DataProperty', 'm', 'scalar', '壁厚', 15);
 INSERT INTO `basic_structure` VALUES (54, 2, 'DataProperty', 'm', 'scalar', '粗糙度', 15);
 INSERT INTO `basic_structure` VALUES (55, 1, 'DataProperty', 'W/m2.K', 'scalar', '传热系数', 4);
-INSERT INTO `basic_structure` VALUES (56, 0, 'ElementType', NULL, 'none', '加油车', 8);
+INSERT INTO `basic_structure` VALUES (56, 1, 'ElementObject', 'null', 'none', '加油车', 8);
 
 SET FOREIGN_KEY_CHECKS = 1;
