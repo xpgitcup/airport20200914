@@ -17,5 +17,6 @@
 	"/logout.*",
 	"/logout/*",
 	"/home/**",
+	"/systemLog/**",
 	"/engineeringOperation/**"
 ]
