@@ -38,3 +38,18 @@ grails.plugin.springsecurity.rememberMe.persistentToken.domainClassName = 'cn.ed
 grails.plugin.springsecurity.rest.token.storage.gorm.tokenDomainClassName = "cn.edu.cup.system.CupToken"
 grails.plugin.springsecurity.rest.token.storage.gorm.tokenValuePropertyName = "token"
 grails.plugin.springsecurity.rest.token.storage.gorm.usernamePropertyName = "username"
+
+
+// Added by the Audit-Logging plugin:
+grails.plugin.auditLog.auditDomainClassName = 'cn.edu.cup.system.AuditTrail'
+
+//audit logger username
+grails {
+	plugin {
+		auditLog {
+			actorClosure = { request, session ->
+				request.applicationContext.springSecurityService.principal?.username
+			}
+		}
+	}
+}
