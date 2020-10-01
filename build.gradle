@@ -125,3 +125,9 @@ assets {
     minifyJs = true
     minifyCss = true
 }
+
+ext {
+    grails {
+        pathingJar = true
+    }
+}
