@@ -37,7 +37,11 @@ class InitService {
         def adminRole = new Role(authority: 'ROLE_ADMIN').save()
 
         // 创建用户
-        def users = ['me', '李晓平', '李维嘉', '谭遥', '王延庆', '康琦', '吴海浩', '宫敬', '王雨墨']
+        def users = ['me', '李晓平', '李维嘉', '康琦', '吴海浩', '宫敬', '王雨墨',
+                     '刘大千', '姬帅鹏', '吴佳虎', '任书健',
+                     '刘胜男', '都兆楠', '谭遥', '崔雪萌',
+                     '杨起', '焦玉博', '王延庆',
+        ]
         users.each { it ->
             def testUser = new User(username: it, password: 'password').save()
             // 给用户赋予权限
